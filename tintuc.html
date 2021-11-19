@@ -1,0 +1,944 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Demo theme WordPress bán hàng điện tử, điện máy | Công nghệ cho cuộc sống</title>
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel='stylesheet' href='css/styles.css?ver=5.0.4' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/setup_css.css' type='text/css' />
+    <link rel='stylesheet' href='css/devvn-quick-buy.css?ver=2.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-layout.css?ver=3.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-smallscreen.css?ver=3.4.5' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' href='css/woocommerce.css?ver=3.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='css/devvn_style.css?ver=1.02' type='text/css' media='all' />
+    <link rel='stylesheet' id='respon-css' href='css/respon.css?ver=1.02' type='text/css' media='all' />
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <link rel="icon" href="images/logo.png" sizes="32x32" />
+    <link rel="icon" href="images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
+    <meta name="msapplication-TileImage" content="images/logo.png" />
+    <script>
+        jQuery( document ).ready(function() {
+        jQuery('img[data-lazy-src]').each(function() 
+        {  
+              var imgsrc = jQuery(this).attr("data-lazy-src");
+              jQuery(this).attr('src',imgsrc);
+        });    
+    var tbay_bottom_header = jQuery('header.header');
+   
+        var CurrentScroll = 0;
+        var tbay_width = jQuery(window).width();
+        var header_height = tbay_bottom_header.height();
+       
+        jQuery(window).scroll(function() {
+            if(tbay_width <= 767) {
+                //alert('ss');
+                var NextScroll = jQuery(this).scrollTop();
+                if (NextScroll > header_height + 30) {
+                    tbay_bottom_header.addClass('sticky-header');
+                  
+                } else {
+                    tbay_bottom_header.removeClass('sticky-header');
+                   
+                }
+               
+            }
+        });
+    });
+    
+    </script>
+</head>
+
+<body data-rsssl=1 class="home woocommerce page-template page-template-templates page-template-home-default page-template-templateshome-default-php page page-id-409 woocommerce-no-js devvn_desktop sidebar_to_menu logo_menu_stick">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <header class="header">
+        <div class="top_header">
+            <div class="container">
+                <div class="top_header_left"><i class="fa fa-envelope-open" aria-hidden="true"></i> info@tech360.vn</div>
+                <div class="top_header_middle"><i class="fa fa-phone-square" aria-hidden="true"></i> 0888.090.898</div>
+                <div class="top_header_right"><i class="fa fa-facebook-official" aria-hidden="true"></i> fb.com/tech360</div>
+            </div>
+        </div>
+        <div class="main_header">
+            <div class="container">
+                <h2 class="logo">
+                    <a href="/" title="Công nghệ cho cuộc sống"><img src="images/logo.png" alt="Demo theme Wordpress bán hàng điện tử, điện máy" /></a>
+                </h2>
+                <div class="search_header">
+                    <form role="search" method="get" class="woocommerce-product-search" action="/">
+                        <input type="search" id="woocommerce-product-search-field" class="search-field" placeholder="Tìm kiếm sản phẩm" value="" name="s" title="Search for:" />
+                        <button type="submit" class="btn btn-default" id="searchsubmit">Tìm kiếm</button>
+                        <input type="hidden" name="post_type" value="product" />
+                    </form>
+                </div>
+                <div class="cart_header woocommerce">
+                    <div class="popup_cart_hover">
+                        <a class="cart-contents" href="/gio-hang/" title="Hiển thị giỏ hàng">
+                            <span>Giỏ hàng của bạn</span>
+                            <small>Chưa có sản phẩm</small>
+                        </a>
+                        <div class="popup_cart">
+                            <ul class="cart_list product_list_widget ">
+                                <li class="empty">Chưa có sản phẩm trong giỏ hàng.</li>
+                            </ul><!-- end product list -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_header_wrap">
+            <div class="container">
+                <div class="danhmuc_sanpham_menu">
+                    <h3 class="title-sidebar click_open_mega">Danh mục sản phẩm<i class="fa fa-bars"></i></h3>
+                    <div class="devvn_mega_menu_wrap">
+                        <div class="devvn_mega_menu_box">
+                            <ul class="devvn_mega_menu_ul">
+                                <li class="">
+                                    <a href="#" title="Android TV Box"><i class="devvn_mega_menu_icon" style="background: url(images/android_box.png) no-repeat center center;"></i>Android TV Box</a>
+                                    <i class="click_open_sub_megamenu">+</i>
+                                    <div class="devvn_sub_mega_content" style="background: #fff url(images/androidbox.png) no-repeat right bottom;">
+                                        <div class="devvn_sub_mega_content_box devvn-megamenu-3-column">
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub menu 1</h2>
+                                                    <ul>
+                                                        <li><a href="#" title="Sub menu  dm1">Sub menu dm1</a></li>
+                                                        <li><a href="#" title="Sub menu 1">Sub menu 1</a></li>
+                                                        <li><a href="#" title="Sub menu 1">Sub menu 1</a></li>
+                                                        <li><a href="#" title="Sub menu 1">Sub menu 1</a></li>
+                                                        <li><a href="" title="sub 121331">sub 121331</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub menu 2</h2>
+                                                    <ul>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Phụ Kiện Android Box"><i class="devvn_mega_menu_icon" style="background: url(images/phu_kien_android_box.png) no-repeat center center;"></i>Phụ Kiện Android Box</a>
+                                    <i class="click_open_sub_megamenu">+</i>
+                                    <ul class="devvn_sub_menu">
+                                        <li>
+                                            <a href="#" title="Phụ kiện 1">Phụ kiện 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Phụ kiện 2">Phụ kiện 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Phụ kiện 3">Phụ kiện 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Camera Thông Minh"><i class="devvn_mega_menu_icon" style="background: url(images/camera_thong_minh.png) no-repeat center center;"></i>Camera Thông Minh</a>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Kính Thực Tế Ảo"><i class="devvn_mega_menu_icon" style="background: url(images/141230510593.png) no-repeat center center;"></i>Kính Thực Tế Ảo</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="Smart Watch"><i class="devvn_mega_menu_icon" style="background: url(images/smart_watch.png) no-repeat center center;"></i>Smart Watch</a>
+                                    <i class="click_open_sub_megamenu">+</i>
+                                    <div class="devvn_sub_mega_content" style="background: #fff url(images/camera_thong_minh_to.png) no-repeat right bottom;">
+                                        <div class="devvn_sub_mega_content_box devvn-megamenu-3-column">
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub Smart Watch</h2>
+                                                    <ul>
+                                                        <li><a href="#" title="Smart Watch 1">Smart Watch 1</a></li>
+                                                        <li><a href="#" title="Smart Watch 2">Smart Watch 2</a></li>
+                                                        <li><a href="#" title="Smart Watch">Smart Watch</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub Smart Watch 2</h2>
+                                                    <ul>
+                                                        <li><a href="" title="Sub Smart Watch">Sub Smart Watch</a></li>
+                                                        <li><a href="" title="Sub Smart Watch 2 2">Sub Smart Watch 2 2</a></li>
+                                                        <li><a href="" title="Sub Smart Watch 2 3">Sub Smart Watch 2 3</a></li>
+                                                        <li><a href="" title="Sub Smart Watch 2 4">Sub Smart Watch 2 4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Android TV Box"><i class="devvn_mega_menu_icon" style="background: url(images/android_box.png) no-repeat center center;"></i>Android TV Box</a>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Android TV Box"><i class="devvn_mega_menu_icon" style="background: url(images/141230510593.png) no-repeat center center;"></i>Android TV Box</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button_open_menu"><i class="fa fa-bars"></i> Menu</a>
+                <div class="menu_header">
+                    <ul id="menu-main-menu" class="menu">
+                        <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-31"><a href="/trang-chu/">Trang chủ</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-452"><a href="/trang-chu/">Trang chủ 1 – Full width</a></li>
+                                <li id="menu-item-422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-422"><a href="/trang-chu-2/">Trang chủ 2 – Full width + Product Menu</a></li>
+                                <li id="menu-item-421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-409 current_page_item menu-item-421"><a href="/">Trang chủ 3 – Mặc định – Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-29"><a href="/tin-tuc/">Tin tức</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181"><a href="/category/camera-thong-minh/">Camera Thông Minh</a></li>
+                                <li id="menu-item-180" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-180"><a href="/category/android-box/">Android Box</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-183" class="menu-item menu-item-type-post_type_archive menu-item-object-videos menu-item-183"><a href="/videos/">Videos</a></li>
+                        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="/ho-tro-khach-hang/">Hỗ trợ khách hàng</a></li>
+                        <li id="menu-item-232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232"><a href="/he-thong-dai-ly/">Hệ thống đại lý</a></li>
+                        <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="/lien-he/">Liên hệ</a></li>
+                        <li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="/tai-khoan/">Tài khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="end_navpage"></div>
+    </header>
+    <!-- Thay đổi ở đây -->
+    <div class="main_body">
+        <div class="container">
+            <div class="row row-padding-15">
+                <div class="main_container col-md-9 col-sm-9 col-xs-12">
+                    <main id="main" class="site-main" role="main">
+                        <div class="breadcrumb"><span><span><a href="https://tech360.vn/">Trang chủ</a> / <span class="breadcrumb_last" aria-current="page">Tin tức</span></span></span></div>
+                        <div class="page_content">
+                            <header>
+                                <h1 class="title-page">Tin tức</h1>
+                            </header>
+                            <section id="latest-posts" class="clearfix">
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/co-dang-de-chi-tien-cho-mot-chiec-may-chieu-co-do-phan-giai-cao-hon-khong" title="Có đáng để chi tiền cho một chiếc máy chiếu có độ phân giải cao hơn không?" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/do-phan-giai-cua-may-chieu-1-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="độ phân giải của máy chiếu 1"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/co-dang-de-chi-tien-cho-mot-chiec-may-chieu-co-do-phan-giai-cao-hon-khong" title="Có đáng để chi tiền cho một chiếc máy chiếu có độ phân giải cao hơn không?">Có đáng để chi tiền cho một chiếc máy chiếu có độ phân giải cao hơn không?</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>24/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Liệu có đáng để chi nhiều tiền cho một chiếc máy chiếu có độ phân giải cao hơn không? Câu trả lời có thể ảnh hưởng đến mức giá mà bạn sẽ phải trả cho máy chiếu của mình, có thể là vài triệu đồng, vài chục triệu đồng đến hàng trăm triệu đồng. Một…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/co-dang-de-chi-tien-cho-mot-chiec-may-chieu-co-do-phan-giai-cao-hon-khong" title="Có đáng để chi tiền cho một chiếc máy chiếu có độ phân giải cao hơn không?" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/may-chieu-lcd-va-may-chieu-led-co-gi-khac-khac-biet" title="Máy chiếu LCD và máy chiếu LED có gì khác khác biệt?" rel="nofollow">
+                                            <img width="295" height="295" src="https://tech360.vn/wp-content/uploads/2016/12/3LCD-logo.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="Máy chiếu hội trường Hitachi CP-EX402"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/may-chieu-lcd-va-may-chieu-led-co-gi-khac-khac-biet" title="Máy chiếu LCD và máy chiếu LED có gì khác khác biệt?">Máy chiếu LCD và máy chiếu LED có gì khác khác biệt?</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>23/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Sự khác biệt nằm ở nguồn sáng của máy chiếu. Bởi vậy chắc chắn rằng máy chiếu LCD và máy chiếu LED sẽ có sự khác biệt. Đọc bài viết bên dưới đây để biết sự khác biệt đó là gì nhé. 1. Máy chiếu LCD Máy chiếu LCD chiếu ánh sáng lên các gương…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/may-chieu-lcd-va-may-chieu-led-co-gi-khac-khac-biet" title="Máy chiếu LCD và máy chiếu LED có gì khác khác biệt?" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/goc-lam-giau-cach-mo-rap-chieu-phim-mini-von-it-loi-nhuan-cao" title="[Góc làm giàu] Cách mở rạp chiếu phim mini vốn ít, lợi nhuận cao" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/kinh-doanh-rap-chieu-phim-4-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/goc-lam-giau-cach-mo-rap-chieu-phim-mini-von-it-loi-nhuan-cao" title="[Góc làm giàu] Cách mở rạp chiếu phim mini vốn ít, lợi nhuận cao">[Góc làm giàu] Cách mở rạp chiếu phim mini vốn ít, lợi nhuận cao</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>22/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Trong bài viết này, chúng tôi sẽ đưa ra những thông tin cần thiết về cách mở rạp chiếu phim mini vốn ít, lợi nhuận cao để xem loại hình doanh nghiệp này có phù hợp với bạn không nhé. Tìm hiểu về các hoạt động hàng ngày của chủ sở hữu rạp chiếu phim,…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/goc-lam-giau-cach-mo-rap-chieu-phim-mini-von-it-loi-nhuan-cao" title="[Góc làm giàu] Cách mở rạp chiếu phim mini vốn ít, lợi nhuận cao" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/may-chieu-ky-thuat-so-la-gi-nen-mua-may-chieu-ky-thuat-so-nao-tot" title="Máy chiếu kỹ thuật số là gì? Nên mua máy chiếu kỹ thuật số nào tốt?" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/may-chieu-ky-thuat-so-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="máy chiếu kỹ thuật số"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/may-chieu-ky-thuat-so-la-gi-nen-mua-may-chieu-ky-thuat-so-nao-tot" title="Máy chiếu kỹ thuật số là gì? Nên mua máy chiếu kỹ thuật số nào tốt?">Máy chiếu kỹ thuật số là gì? Nên mua máy chiếu kỹ thuật số nào tốt?</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>22/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Máy chiếu kỹ thuật số là gì? Để biết được định nghĩa về dòng máy chiếu này và dòng máy chiếu nào bạn nên mua thì có thể tìm hiểu ở trong bài viết bên dưới đây. 1. Định nghĩa máy chiếu kỹ thuật số là gì? Máy chiếu kỹ thuật số còn được gọi…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/may-chieu-ky-thuat-so-la-gi-nen-mua-may-chieu-ky-thuat-so-nao-tot" title="Máy chiếu kỹ thuật số là gì? Nên mua máy chiếu kỹ thuật số nào tốt?" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/xiaomi-mi-smart-band-4-chinh-thuc-len-ke-tai-viet-nam-tu-ngay-22-6" title="Xiaomi Mi Smart Band 4 chính thức lên kệ tại Việt Nam từ ngày 22/6" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/1-11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/xiaomi-mi-smart-band-4-chinh-thuc-len-ke-tai-viet-nam-tu-ngay-22-6" title="Xiaomi Mi Smart Band 4 chính thức lên kệ tại Việt Nam từ ngày 22/6">Xiaomi Mi Smart Band 4 chính thức lên kệ tại Việt Nam từ ngày 22/6</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>21/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Sau hơn 1 tuần ra mắt tại Trung Quốc, Xiaomi đã chính thức công bố mẫu vòng đeo tay theo dõi sức khỏe Mi Smart Band 4 tại thị trường Việt Nam. Là thế hệ thứ 4 và cũng là mới nhất của dòng sản phẩm có doanh số cực khủng, cũng là nhân tố…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/xiaomi-mi-smart-band-4-chinh-thuc-len-ke-tai-viet-nam-tu-ngay-22-6" title="Xiaomi Mi Smart Band 4 chính thức lên kệ tại Việt Nam từ ngày 22/6" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/ly-do-vi-sao-may-chieu-4k-dat-tien-hon-nhung-may-chieu-thong-thuong-khac" title="Lý do vì sao máy chiếu 4K đắt tiền hơn những máy chiếu thông thường khác" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2018/10/viewsonic-px747-4k-11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/ly-do-vi-sao-may-chieu-4k-dat-tien-hon-nhung-may-chieu-thong-thuong-khac" title="Lý do vì sao máy chiếu 4K đắt tiền hơn những máy chiếu thông thường khác">Lý do vì sao máy chiếu 4K đắt tiền hơn những máy chiếu thông thường khác</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>21/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Máy chiếu 4K được giới thiệu ra thị trường đã được vài năm nhưng nó vẫn được xếp vào phân khúc cao cấp với mức giá cực cao. Có thể bạn sẽ nghĩ rằng, sau một thời gian dài mức giá của&nbsp;máy chiếu 4K&nbsp;sẽ giảm mạnh cho phép những người có thu nhập thấp hơn…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/ly-do-vi-sao-may-chieu-4k-dat-tien-hon-nhung-may-chieu-thong-thuong-khac" title="Lý do vì sao máy chiếu 4K đắt tiền hơn những máy chiếu thông thường khác" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/bau-duc-cam-doan-vff-co-ngay-200-ti-neu-sep-pho-biet-tu-trong" title="Bầu Đức cam đoan VFF có ngay 200 tỉ, nếu ‘sếp phó’ biết tự trọng" rel="nofollow">
+                                            <img width="300" height="270" src="https://tech360.vn/wp-content/uploads/2019/06/bau-duc-bat-ngo-len-tieng-khi-u23-viet-nam-danh-bai-u23-thai-lan-300x270.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/bau-duc-cam-doan-vff-co-ngay-200-ti-neu-sep-pho-biet-tu-trong" title="Bầu Đức cam đoan VFF có ngay 200 tỉ, nếu ‘sếp phó’ biết tự trọng">Bầu Đức cam đoan VFF có ngay 200 tỉ, nếu ‘sếp phó’ biết tự trọng</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>20/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Ông bầu Đoàn Nguyên Đức của CLB HAGL – nguyên phó chủ tịch phụ trách tài chính VFF, ông là người có công lớn đưa HLV Park Hang-seo về với bóng đá Việt Nam, vừa qua có những phát biểu khá thẳng thắn về người hiện đang nắm giữ vị trí ông từng làm tại…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/bau-duc-cam-doan-vff-co-ngay-200-ti-neu-sep-pho-biet-tu-trong" title="Bầu Đức cam đoan VFF có ngay 200 tỉ, nếu ‘sếp phó’ biết tự trọng" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/phong-chieu-phim-gia-dinh-cao-cap-thich-hop-su-dung-model-may-chieu-nao" title="Phòng chiếu phim gia đình cao cấp thích hợp sử dụng model máy chiếu nào?" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/05/huong-dan-xay-dung-rap-chieu-phim-tai-nha-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="xây dựng rạp chiếu phim gia đình"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/phong-chieu-phim-gia-dinh-cao-cap-thich-hop-su-dung-model-may-chieu-nao" title="Phòng chiếu phim gia đình cao cấp thích hợp sử dụng model máy chiếu nào?">Phòng chiếu phim gia đình cao cấp thích hợp sử dụng model máy chiếu nào?</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>20/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Để tạo ra một chất lượng trình chiếu tuyệt vời thì trước đó bạn cần phải nghiên cứu kỹ lưỡng về máy chiếu trước khi mua. Chúng tôi khuyên mọi người nên chú ý khai thác tối đa đến hai khía cạnh chính của máy chiếu là độ phân giải và công nghệ hiển thị…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/phong-chieu-phim-gia-dinh-cao-cap-thich-hop-su-dung-model-may-chieu-nao" title="Phòng chiếu phim gia đình cao cấp thích hợp sử dụng model máy chiếu nào?" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/smartphone-deo-tay-man-hinh-uon-deo-gia-10-trieu-dong" title="Smartphone đeo tay màn hình uốn dẻo giá 10 triệu đồng" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/2-11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/smartphone-deo-tay-man-hinh-uon-deo-gia-10-trieu-dong" title="Smartphone đeo tay màn hình uốn dẻo giá 10 triệu đồng">Smartphone đeo tay màn hình uốn dẻo giá 10 triệu đồng</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>19/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Nubia Alpha sử dụng màn hình OLED cỡ 4 inch có thể uốn dẻo, tích hợp camera và chạy hệ điều hành tùy biến từ Android. Nubia Alpha là mẫu smartphone đeo tay có màn hình uốn dẻo đầu tiên được bán thương mại trên thế giới. Nguyên mẫu thử nghiệm ra mắt lần đầu…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/smartphone-deo-tay-man-hinh-uon-deo-gia-10-trieu-dong" title="Smartphone đeo tay màn hình uốn dẻo giá 10 triệu đồng" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/facebook-ra-mat-tien-so-libra-se-hoat-dong-vao-dau-nam-sau" title="FACEBOOK RA MẮT TIỀN SỐ LIBRA, SẼ HOẠT ĐỘNG VÀO ĐẦU NĂM SAU" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/Facebook_20190504101917-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/facebook-ra-mat-tien-so-libra-se-hoat-dong-vao-dau-nam-sau" title="FACEBOOK RA MẮT TIỀN SỐ LIBRA, SẼ HOẠT ĐỘNG VÀO ĐẦU NĂM SAU">FACEBOOK RA MẮT TIỀN SỐ LIBRA, SẼ HOẠT ĐỘNG VÀO ĐẦU NĂM SAU</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>19/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Không chỉ thay đổi cách hàng tỷ người trên Trái đất giao tiếp với nhau, Facebook giờ đây còn muốn thay đổi cái nhìn của họ về tiền điện tử. Sau những&nbsp;đồn đoán, Facebook vừa chính thức công bố đồng tiền điện tử đầu tiên của mình mang tên Libra. Phải tới 2020, đồng tiền…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/facebook-ra-mat-tien-so-libra-se-hoat-dong-vao-dau-nam-sau" title="FACEBOOK RA MẮT TIỀN SỐ LIBRA, SẼ HOẠT ĐỘNG VÀO ĐẦU NĂM SAU" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/meo-su-dung-va-cong-dung-cua-may-chieu-doi-voi-tung-linh-vuc" title="Mẹo sử dụng và công dụng của máy chiếu đối với từng lĩnh vực" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/05/cach-chon-may-chieu-cho-dao-tao-day-hoc-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="Máy chiếu văn phòng"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/meo-su-dung-va-cong-dung-cua-may-chieu-doi-voi-tung-linh-vuc" title="Mẹo sử dụng và công dụng của máy chiếu đối với từng lĩnh vực">Mẹo sử dụng và công dụng của máy chiếu đối với từng lĩnh vực</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>19/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Hiện nay, máy chiếu được coi là một phương án thay thế tốt nhất cho Smartv cho những địa điểm lớn hoặc nhu cầu giải trí chuyên nghiệp tại gia. Để biết được thiết bị này có thực sự xứng đáng để sử dụng hay không? Dưới đây, chúng ta sẽ cùng nhau đi tìm…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/meo-su-dung-va-cong-dung-cua-may-chieu-doi-voi-tung-linh-vuc" title="Mẹo sử dụng và công dụng của máy chiếu đối với từng lĩnh vực" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/nhin-tu-ban-hit-do-ta-khong-do-nang-moi-hieu-tai-sao-game-thu-viet-lai-yeu-thich-game-trung-quoc-den-the" title="Nhìn từ bản hit “Độ Ta Không Độ Nàng” mới hiểu tại sao game thủ Việt lại yêu thích game Trung Quốc đến thế" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/2-9-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/nhin-tu-ban-hit-do-ta-khong-do-nang-moi-hieu-tai-sao-game-thu-viet-lai-yeu-thich-game-trung-quoc-den-the" title="Nhìn từ bản hit “Độ Ta Không Độ Nàng” mới hiểu tại sao game thủ Việt lại yêu thích game Trung Quốc đến thế">Nhìn từ bản hit “Độ Ta Không Độ Nàng” mới hiểu tại sao game thủ Việt lại yêu thích game Trung Quốc đến thế</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>18/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Nếu bạn vẫn đang nghe hoặc bị giai điệu ca khúc này văng vẳng bên tai, thì đó chính là một trong những đặc trưng của văn hóa Trung Quốc với các sản phẩm cực kì “gây nghiện” như game và âm nhạc cổ phong. Độ Ta Không Độ Nàng sẽ là một ví dụ…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/nhin-tu-ban-hit-do-ta-khong-do-nang-moi-hieu-tai-sao-game-thu-viet-lai-yeu-thich-game-trung-quoc-den-the" title="Nhìn từ bản hit “Độ Ta Không Độ Nàng” mới hiểu tại sao game thủ Việt lại yêu thích game Trung Quốc đến thế" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/tren-tay-samsung-tv-qled-8k-an-tuong-manh-khong-phai-o-do-phan-giai-cao" title="TRÊN TAY SAMSUNG TV QLED 8K: ẤN TƯỢNG MẠNH KHÔNG PHẢI Ở ĐỘ PHÂN GIẢI CAO" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/1-8-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/tren-tay-samsung-tv-qled-8k-an-tuong-manh-khong-phai-o-do-phan-giai-cao" title="TRÊN TAY SAMSUNG TV QLED 8K: ẤN TƯỢNG MẠNH KHÔNG PHẢI Ở ĐỘ PHÂN GIẢI CAO">TRÊN TAY SAMSUNG TV QLED 8K: ẤN TƯỢNG MẠNH KHÔNG PHẢI Ở ĐỘ PHÂN GIẢI CAO</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>18/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Không phải độ phân giải cao gấp đôi các TV 4K “thông thường” hiện nay, chất lượng hình ảnh và góc nhìn mới là điểm ấn tượng ở TV 8K đầu tiên của Samsung. Samsung là hãng nổ phát súng đầu tiên trên thị trường TV 8K ở Việt Nam với dòng sản phẩm Q900R….</p>
+                                            </div>
+                                            <a href="https://tech360.vn/tren-tay-samsung-tv-qled-8k-an-tuong-manh-khong-phai-o-do-phan-giai-cao" title="TRÊN TAY SAMSUNG TV QLED 8K: ẤN TƯỢNG MẠNH KHÔNG PHẢI Ở ĐỘ PHÂN GIẢI CAO" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/danh-gia-3-mau-may-chieu-giai-tri-gia-dinh-cho-phong-co-nhieu-anh-sang" title="Đánh giá 3 mẫu máy chiếu giải trí gia đình cho phòng có nhiều ánh sáng" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2018/10/hd27e-bright-lumens-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/danh-gia-3-mau-may-chieu-giai-tri-gia-dinh-cho-phong-co-nhieu-anh-sang" title="Đánh giá 3 mẫu máy chiếu giải trí gia đình cho phòng có nhiều ánh sáng">Đánh giá 3 mẫu máy chiếu giải trí gia đình cho phòng có nhiều ánh sáng</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>18/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Một trong những câu hỏi thường gặp nhất đối với người đang tìm kiếm một chiếc máy chiếu gia đình đó là: ” nên mua máy chiếu nào cho căn phòng có ánh sáng?” Với các mức giá khác nhau, loại máy khác nhau và yêu cầu khác nhau. Có thể 3 mẫu máy chiếu…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/danh-gia-3-mau-may-chieu-giai-tri-gia-dinh-cho-phong-co-nhieu-anh-sang" title="Đánh giá 3 mẫu máy chiếu giải trí gia đình cho phòng có nhiều ánh sáng" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/top-4-may-chieu-bluetooth-chia-se-am-thanh-tot-nhat" title="Top 4 máy chiếu Bluetooth chia sẻ âm thanh tốt nhất" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/04/may-chieu-mini-tyco-m16-wifi-cong-ket-noi-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="may-chieu-mini-tyco-m16"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/top-4-may-chieu-bluetooth-chia-se-am-thanh-tot-nhat" title="Top 4 máy chiếu Bluetooth chia sẻ âm thanh tốt nhất">Top 4 máy chiếu Bluetooth chia sẻ âm thanh tốt nhất</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>17/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Dưới đây là top 4 mẫu máy chiếu Bluetooth di động tốt nhất trong năm 2019. Chúng có khả năng tương thích với nhiều loại thiết bị, chất lượng hình ảnh tốt, thiết kế gọn nhẹ và tích hợp tính năng kết nối không dây.&nbsp; Máy chiếu bluetooth Tyco M16 Máy chiếu được trang bị…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/top-4-may-chieu-bluetooth-chia-se-am-thanh-tot-nhat" title="Top 4 máy chiếu Bluetooth chia sẻ âm thanh tốt nhất" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/may-chieu-vivitek-dw770ust" title="Vivitek DW770UST – Series máy chiếu mới nhất của thương thiệu Vivitek là sự sáng tạo và táo bạo hơn cho các lớp học" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/may-chieu-vivitek-DW770UST-2-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="máy chiếu vivitek DW770U 2"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/may-chieu-vivitek-dw770ust" title="Vivitek DW770UST – Series máy chiếu mới nhất của thương thiệu Vivitek là sự sáng tạo và táo bạo hơn cho các lớp học">Vivitek DW770UST – Series máy chiếu mới nhất của thương thiệu Vivitek là sự sáng tạo và táo bạo hơn cho các lớp học</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>14/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Máy chiếu siêu gần Ultra Short Throw (UST) mới từ thương hiệu Vivitek – DW770UST cung cấp hình ảnh chiếu chéo 100 inch kết hợp cường độ sáng 3500 Lumens và độ phân giải WXGA mang lại sự sáng tạo và táo bạo cho các tổ chức giáo dục.&nbsp; Hưởng lợi từ công nghệ&nbsp;Ultra Short…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/may-chieu-vivitek-dw770ust" title="Vivitek DW770UST – Series máy chiếu mới nhất của thương thiệu Vivitek là sự sáng tạo và táo bạo hơn cho các lớp học" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/nghe-apple-het-gia-cuc-sat-20-trieu-ong-chu-binh-tinh-ganh-keo-cuc-hay-bang-cai-mac-ao-huyen-thoai" title="Nghe Apple hét giá “cục sắt 20 triệu”, ông chú bình tĩnh gánh kèo cực hay bằng cái mắc áo huyền thoại" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/2-7-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/nghe-apple-het-gia-cuc-sat-20-trieu-ong-chu-binh-tinh-ganh-keo-cuc-hay-bang-cai-mac-ao-huyen-thoai" title="Nghe Apple hét giá “cục sắt 20 triệu”, ông chú bình tĩnh gánh kèo cực hay bằng cái mắc áo huyền thoại">Nghe Apple hét giá “cục sắt 20 triệu”, ông chú bình tĩnh gánh kèo cực hay bằng cái mắc áo huyền thoại</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>14/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Trong sự kiện gần nhất của mình, Apple vừa khiến fan hâm mộ phải giật thon thót khi đưa ra hàng loạt những sản phẩm mới bổ sung vào bộ sưu tập “thượng lưu”: Mac Pro hơn trăm triệu, màn hình Pro Display mới cũng xấp xỉ trăm triệu luôn. Thế nhưng, điều khiến người…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/nghe-apple-het-gia-cuc-sat-20-trieu-ong-chu-binh-tinh-ganh-keo-cuc-hay-bang-cai-mac-ao-huyen-thoai" title="Nghe Apple hét giá “cục sắt 20 triệu”, ông chú bình tĩnh gánh kèo cực hay bằng cái mắc áo huyền thoại" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/may-chieu-laser-chung-la-gi-va-chung-co-tot-khong" title="Máy chiếu Laser: Chúng là gì và chúng có tốt không?" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/may-chieu-laser-1-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="máy chiếu laser 1"> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/may-chieu-laser-chung-la-gi-va-chung-co-tot-khong" title="Máy chiếu Laser: Chúng là gì và chúng có tốt không?">Máy chiếu Laser: Chúng là gì và chúng có tốt không?</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>14/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Mặc dù máy chiếu laser không phù hợp để sử dụng cho tất cả các nhu cầu nhưng nó có một số lợi ích to lớn hơn so với các công nghệ đèn cũ khác. Bài viết này, chúng ta sẽ cùng đi sâu hơn vào sự khác biệt giữa công nghệ đèn thường và…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/may-chieu-laser-chung-la-gi-va-chung-co-tot-khong" title="Máy chiếu Laser: Chúng là gì và chúng có tốt không?" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/gio-day-ban-da-co-the-dung-thiet-bi-android-lam-khoa-bao-mat-cho-iphone-ipad" title="GIỜ ĐÂY, BẠN ĐÃ CÓ THỂ DÙNG THIẾT BỊ ANDROID LÀM KHÓA BẢO MẬT CHO IPHONE, IPAD" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/1950079-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/gio-day-ban-da-co-the-dung-thiet-bi-android-lam-khoa-bao-mat-cho-iphone-ipad" title="GIỜ ĐÂY, BẠN ĐÃ CÓ THỂ DÙNG THIẾT BỊ ANDROID LÀM KHÓA BẢO MẬT CHO IPHONE, IPAD">GIỜ ĐÂY, BẠN ĐÃ CÓ THỂ DÙNG THIẾT BỊ ANDROID LÀM KHÓA BẢO MẬT CHO IPHONE, IPAD</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>13/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Google đã chính thức xác nhận rằng bạn đã có thể sử dụng điện thoại Android làm khóa bảo mật cho những thiết bị iOS. Đây là một bổ sung cần thiết sau 2 tháng Google đưa tính năng bảo mật này đến hơn 1 tỉ thiết bị Android. Khóa bảo mật&nbsp;là một trong những…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/gio-day-ban-da-co-the-dung-thiet-bi-android-lam-khoa-bao-mat-cho-iphone-ipad" title="GIỜ ĐÂY, BẠN ĐÃ CÓ THỂ DÙNG THIẾT BỊ ANDROID LÀM KHÓA BẢO MẬT CHO IPHONE, IPAD" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-box has_thumbnail">
+                                    <div class="post-img">
+                                        <a href="https://tech360.vn/lg-sap-ban-may-loc-khong-khi-mini-cho-o-to-dau-tien-o-vn-gia-du-kien-6-trieu-dong" title="LG SẮP BÁN MÁY LỌC KHÔNG KHÍ MINI CHO Ô TÔ ĐẦU TIÊN Ở VN, GIÁ DỰ KIẾN 6 TRIỆU ĐỒNG" rel="nofollow">
+                                            <img width="300" height="300" src="https://tech360.vn/wp-content/uploads/2019/06/1-5-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""> </a>
+                                    </div>
+                                    <div class="post-data">
+                                        <div class="post-data-container">
+                                            <header>
+                                                <h2 class="title post-title"><a href="https://tech360.vn/lg-sap-ban-may-loc-khong-khi-mini-cho-o-to-dau-tien-o-vn-gia-du-kien-6-trieu-dong" title="LG SẮP BÁN MÁY LỌC KHÔNG KHÍ MINI CHO Ô TÔ ĐẦU TIÊN Ở VN, GIÁ DỰ KIẾN 6 TRIỆU ĐỒNG">LG SẮP BÁN MÁY LỌC KHÔNG KHÍ MINI CHO Ô TÔ ĐẦU TIÊN Ở VN, GIÁ DỰ KIẾN 6 TRIỆU ĐỒNG</a></h2>
+                                                <div class="post-info">
+                                                    <span class="thetime updated"><i class="fa fa-clock-o"></i> <span>13/06/2019</span></span>
+                                                </div>
+                                            </header>
+                                            <div class="post-excerpt">
+                                                <p>Cùng với các sản phẩm máy lọc không khí thông thường, điều hòa công nghiệp và dân dụng có chức năng lọc không khí, LG sắp sửa tung ra thị trường Việt Nam một sản phẩm lọc không khí mini đầu tiên có thể dùng cho ô tô hoặc các không gian nhỏ khác. Đó…</p>
+                                            </div>
+                                            <a href="https://tech360.vn/lg-sap-ban-may-loc-khong-khi-mini-cho-o-to-dau-tien-o-vn-gia-du-kien-6-trieu-dong" title="LG SẮP BÁN MÁY LỌC KHÔNG KHÍ MINI CHO Ô TÔ ĐẦU TIÊN Ở VN, GIÁ DỰ KIẾN 6 TRIỆU ĐỒNG" rel="nofollow" class="read_more">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                            <div class="paginate_links"><span aria-current="page" class="page-numbers current">1</span>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/2">2</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/3">3</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/4">4</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/5">5</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/6">6</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/7">7</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/8">8</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/9">9</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/10">10</a>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/11">11</a>
+                                <span class="page-numbers dots">…</span>
+                                <a class="page-numbers" href="https://tech360.vn/tin-tuc/page/19">19</a>
+                                <a class="next page-numbers" href="https://tech360.vn/tin-tuc/page/2">Tiếp</a></div>
+                        </div>
+                    </main>
+                </div>
+                <aside id="sidebar" class="sidebar col-md-3 col-sm-3 col-xs-12" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+                    <div id="search-2" class="widget widget_search">
+                        <div itemscope itemtype="http://schema.org/WebSite">
+                            <meta itemprop="url" content="https://dienmay2.trustweb.vn" />
+                            <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction" method="get" class="form-inline" id="searchform" action="/">
+                                <meta itemprop="target" content="https://dienmay2.trustweb.vn?s={s}" />
+                                <input itemprop="query-input" type="text" class="form-control field" value="" name="s" id="s" placeholder="Tìm kiếm tin tức" />
+                                <button type="submit" class="btn btn-default" id="searchsubmit">Tìm kiếm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="categories-4" class="widget widget_categories">
+                        <h3 class="title-sidebar">Danh mục tin tức</h3>
+                        <ul>
+                            <li class="cat-item cat-item-43"><a href="/category/android-box/">Android Box</a> (2)
+                            </li>
+                            <li class="cat-item cat-item-1"><a href="/category/camera-thong-minh/">Camera Thông Minh</a> (4)
+                            </li>
+                            <li class="cat-item cat-item-57"><a href="/category/may-chieu-phu-kien/">Máy chiếu &amp; Phụ kiện</a> (1)
+                            </li>
+                            <li class="cat-item cat-item-60"><a href="/category/phu-kien-ket-noi-chuyen-doi/">Phụ kiện kết nối &amp; Chuyển đổi</a> (1)
+                            </li>
+                            <li class="cat-item cat-item-62"><a href="/category/san-pham-xiaomi/">Sản Phẩm XIAOMI</a> (1)
+                            </li>
+                            <li class="cat-item cat-item-63"><a href="/category/smart-watch/">Smart Watch</a> (1)
+                            </li>
+                            <li class="cat-item cat-item-64"><a href="/category/thiet-bi-truyen-hinh-tv/">Thiết Bị Truyền Hình &amp; TV</a> (1)
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="newsnoibat_widget-2" class="widget newsnoibat_widget">
+                        <h3 class="title-sidebar">Tin tức nổi bật</h3>
+                        <div class="tintuc_lienquan">
+                            <ul class="news_list">
+                                <li class="has-thumbnail">
+                                    <a href="/quay-video-360-trai-nghiem-vr-voi-action-camera-sjcam-sj360/" title="Quay video 360 độ, trải nghiệm VR với action camera SJCAM SJ360">
+                                        <img width="150" height="150" src="images/anh-dep-girl-xinh-02-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
+                                        <h3>Quay video 360 độ, trải nghiệm VR với action camera SJCAM SJ360</h3>
+                                    </a>
+                                </li>
+                                <li class="has-thumbnail">
+                                    <a href="/kinh-nghiem-su-dung-camera-hanh-dong-cho-phuot-thu/" title="Kinh nghiệm sử dụng camera hành động cho phượt thủ">
+                                        <img width="150" height="150" src="images/anh-dep-meo-con3__76574_zoom-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
+                                        <h3>Kinh nghiệm sử dụng camera hành động cho phượt thủ</h3>
+                                    </a>
+                                </li>
+                                <li class="has-thumbnail">
+                                    <a href="/sau-camera-thao-sj6-legend-cua-sjcam-thi-truong-sap-don-nhan-san-pham-cao-cap-moi-mang-ten-sj7-star/" title="Sau camera thể thao SJ6 Legend của SJCAM thị trường sắp đón nhận sản phẩm cao cấp mới mang tên SJ7 Star">
+                                        <img width="150" height="150" src="images/maxresdefault-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
+                                        <h3>Sau camera thể thao SJ6 Legend của SJCAM thị trường sắp đón nhận sản phẩm cao cấp mới mang tên SJ7 Star</h3>
+                                    </a>
+                                </li>
+                                <li class="has-thumbnail">
+                                    <a href="/co-gi-moi-tren-hai-phien-ban-sjcam-sj6-legend-va-sj7-star/" title="Có gì mới trên hai phiên bản SJCAM SJ6 Legend và SJ7 Star">
+                                        <img width="150" height="150" src="images/ipcam-qf004-10-20160517042804-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
+                                        <h3>Có gì mới trên hai phiên bản SJCAM SJ6 Legend và SJ7 Star</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="devvn_widget_most_viewed_entries-2" class="widget devvn_widget_most_viewed_entries">
+                        <h3 class="title-sidebar">Xem nhiều nhất</h3>
+                        <ul>
+                            <li><a href="/sau-camera-thao-sj6-legend-cua-sjcam-thi-truong-sap-don-nhan-san-pham-cao-cap-moi-mang-ten-sj7-star/" title="Sau camera thể thao SJ6 Legend của SJCAM thị trường sắp đón nhận sản phẩm cao cấp mới mang tên SJ7 Star">
+                                    <img width="150" height="150" src="images/maxresdefault-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /> Sau camera thể thao SJ6 Legend của SJCAM thị trường sắp đón nhận sản phẩm cao cấp mới mang tên SJ7 Star </a></li>
+                            <li><a href="/co-gi-moi-tren-hai-phien-ban-sjcam-sj6-legend-va-sj7-star/" title="Có gì mới trên hai phiên bản SJCAM SJ6 Legend và SJ7 Star">
+                                    <img width="150" height="150" src="images/ipcam-qf004-10-20160517042804-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /> Có gì mới trên hai phiên bản SJCAM SJ6 Legend và SJ7 Star </a></li>
+                            <li><a href="/quay-video-360-trai-nghiem-vr-voi-action-camera-sjcam-sj360/" title="Quay video 360 độ, trải nghiệm VR với action camera SJCAM SJ360">
+                                    <img width="150" height="150" src="images/anh-dep-girl-xinh-02-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /> Quay video 360 độ, trải nghiệm VR với action camera SJCAM SJ360 </a></li>
+                            <li><a href="/kinh-nghiem-su-dung-camera-hanh-dong-cho-phuot-thu/" title="Kinh nghiệm sử dụng camera hành động cho phượt thủ">
+                                    <img width="150" height="150" src="images/anh-dep-meo-con3__76574_zoom-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /> Kinh nghiệm sử dụng camera hành động cho phượt thủ </a></li>
+                            <li><a href="/video-review-camera-the-thao-sjcam-sj6-legend-cung-mot-so-hinh-anh-ve-no/" title="Video review camera thể thao SJCAM SJ6 Legend cùng một số hình ảnh về nó">
+                                    <img width="150" height="150" src="images/kiwibox-s3-49-1-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /> Video review camera thể thao SJCAM SJ6 Legend cùng một số hình ảnh về nó </a></li>
+                        </ul>
+                    </div>
+                    <div id="tag_cloud-3" class="widget widget_tag_cloud">
+                        <h3 class="title-sidebar">Từ khóa</h3>
+                        <div class="tagcloud"><a href="/tag/android/" class="tag-cloud-link tag-link-46 tag-link-position-1" style="font-size: 22pt;" aria-label="android (2 mục)">android</a>
+                            <a href="/tag/android-box/" class="tag-cloud-link tag-link-48 tag-link-position-2" style="font-size: 22pt;" aria-label="android box (2 mục)">android box</a>
+                            <a href="/tag/box/" class="tag-cloud-link tag-link-47 tag-link-position-3" style="font-size: 8pt;" aria-label="box (1 mục)">box</a></div>
+                    </div>
+                    <div id="media_image-5" class="widget widget_media_image"><img width="224" height="366" src="images/banner-xe-dien-1.jpg" class="image wp-image-78  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" /></div>
+                </aside>
+                <div class="clearfix"></div>
+                <div class="col-xs-12">
+                    <div class="section_custom_view_products">
+                        <div class="section_cvp_title">
+                            <h3>Sản phẩm nổi bật</h3>
+                        </div>
+                        <div class="section_cvp_content">
+                            <div class="woocommerce columns-5 ">
+                                <ul class="products columns-5">
+                                    <li class="post-224 product type-product status-publish has-post-thumbnail product_cat-camera-thong-minh pa_gpu-test first instock featured shipping-taxable product-type-simple">
+                                        <div class="shop_loop_box">
+                                            <a href="/san-pham/camera-thao-sjcam-sj7-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="images/camera-the-thao-sj4000-1-20160514012410-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" /></a><a rel="nofollow" href="/san-pham/camera-thao-sjcam-sj7-1/" data-quantity="1" data-product_id="224" data-product_sku="" class="button product_type_simple ajax_add_to_cart" id="tech_addtocart_224">Đọc tiếp</a> </div>
+                                        <a href="/san-pham/camera-thao-sjcam-sj7-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                            <h2 class="woocommerce-loop-product__title">Camera thể thao SJCAM SJ7 1</h2>
+                                        </a>
+                                        <span class="price"><span class="amount">Liên hệ</span></span>
+                                        <div class="devvn_is_featured"><img width="80" height="44" src="images/70_58013_1a.png" class="attachment-full size-full" alt="" /></div>
+                                        <div class="devvn_is_tragop"><img src="images/tap-tragop0dong.png" /> <a href="/tra-gop/">Xem chi tiết <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                                    </li>
+                                    <li class="post-108 product type-product status-publish has-post-thumbnail product_cat-android-tv-box product_cat-camera-thong-minh product_cat-kinh-thuc-te-ao product_cat-loa-am-thanh product_cat-may-chieu-phu-kien product_cat-may-chieu-android product_cat-phu-kien-android-box product_cat-phu-kien-ket-noi-chuyen-doi product_cat-pin-sac-du-phong product_cat-san-pham-thong-minh product_cat-san-pham-xiaomi product_cat-smart-watch product_cat-thiet-bi-truyen-hinh-tv product_tag-hdmi  instock featured shipping-taxable purchasable product-type-simple">
+                                        <div class="shop_loop_box">
+                                            <a href="/san-pham/hdmi-khong-day-ezcast-blutimes-bt001/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="images/miracast-hdmi-khong-day-1-20160814200554-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" /></a><a rel="nofollow" href="/tin-tuc/?add-to-cart=108" data-quantity="1" data-product_id="108" data-product_sku="BT001" class="button product_type_simple add_to_cart_button ajax_add_to_cart" id="tech_addtocart_108">Thêm vào giỏ</a> </div>
+                                        <a href="/san-pham/hdmi-khong-day-ezcast-blutimes-bt001/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                            <h2 class="woocommerce-loop-product__title">HDMI không dây &#8211; EzCast Blutimes BT001</h2>
+                                        </a>
+                                        <span class="price"><span class="woocommerce-Price-amount amount">600.000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+                                        <div class="devvn_is_featured"><img width="80" height="44" src="images/70_58013_1a.png" class="attachment-full size-full" alt="" /></div>
+                                    </li>
+                                    <li class="post-104 product type-product status-publish has-post-thumbnail product_cat-android-tv-box product_cat-camera-thong-minh product_cat-kinh-thuc-te-ao product_cat-loa-am-thanh product_cat-may-chieu-phu-kien product_cat-may-chieu-android product_cat-phu-kien-android-box product_cat-phu-kien-ket-noi-chuyen-doi product_cat-pin-sac-du-phong product_cat-san-pham-thong-minh product_cat-san-pham-xiaomi product_cat-smart-watch product_cat-thiet-bi-truyen-hinh-tv product_tag-camera-the-thao  instock featured shipping-taxable purchasable product-type-simple">
+                                        <div class="shop_loop_box">
+                                            <a href="/san-pham/camera-the-thao-sjcam-sj6-legend-4k-wifi/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="images/sjcam-sj6-legend-black-1-20160929212645-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" /></a><a rel="nofollow" href="/tin-tuc/?add-to-cart=104" data-quantity="1" data-product_id="104" data-product_sku="SJCAMSJ6" class="button product_type_simple add_to_cart_button ajax_add_to_cart" id="tech_addtocart_104">Thêm vào giỏ</a> </div>
+                                        <a href="/san-pham/camera-the-thao-sjcam-sj6-legend-4k-wifi/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                            <h2 class="woocommerce-loop-product__title">Camera thể thao SJCAM SJ6 Legend 4K WIFI</h2>
+                                        </a>
+                                        <span class="price"><span class="woocommerce-Price-amount amount">4.390.000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+                                        <div class="devvn_is_featured"><img width="80" height="44" src="images/70_58013_1a.png" class="attachment-full size-full" alt="" /></div>
+                                    </li>
+                                    <li class="post-98 product type-product status-publish has-post-thumbnail product_cat-android-tv-box product_cat-camera-thong-minh product_cat-kinh-thuc-te-ao product_cat-loa-am-thanh product_cat-may-chieu-phu-kien product_cat-may-chieu-android product_cat-phu-kien-android-box product_cat-phu-kien-ket-noi-chuyen-doi product_cat-pin-sac-du-phong product_cat-san-pham-thong-minh product_cat-san-pham-xiaomi product_cat-smart-watch product_cat-thiet-bi-truyen-hinh-tv product_tag-may-chieu  instock sale featured shipping-taxable purchasable product-type-simple">
+                                        <div class="shop_loop_box">
+                                            <a href="/san-pham/may-chieu-tyco-t35/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                <span class="onsale">Giảm giá!</span>
+                                                <img width="300" height="300" src="images/img_6777000-20160621201405-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" /></a><a rel="nofollow" href="/tin-tuc/?add-to-cart=98" data-quantity="1" data-product_id="98" data-product_sku="TYCOT35" class="button product_type_simple add_to_cart_button ajax_add_to_cart" id="tech_addtocart_98">Thêm vào giỏ</a> </div>
+                                        <a href="/san-pham/may-chieu-tyco-t35/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                            <h2 class="woocommerce-loop-product__title">Máy chiếu Tyco T35</h2>
+                                        </a>
+                                        <span class="price"><del><span class="woocommerce-Price-amount amount">6.490.000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">5.900.000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+                                        <div class="devvn_is_featured"><img width="80" height="44" src="images/70_58013_1a.png" class="attachment-full size-full" alt="" /></div>
+                                    </li>
+                                    <li class="post-90 product type-product status-publish has-post-thumbnail product_cat-android-tv-box product_cat-camera-thong-minh product_cat-kinh-thuc-te-ao product_cat-android-box-kiwibox product_cat-loa-am-thanh product_cat-may-chieu-phu-kien product_cat-may-chieu-android product_cat-android-box-minix product_cat-phu-kien-android-box product_cat-phu-kien-ket-noi-chuyen-doi product_cat-pin-sac-du-phong product_cat-san-pham-thong-minh product_cat-san-pham-xiaomi product_cat-smart-watch product_cat-thiet-bi-truyen-hinh-tv last instock sale featured shipping-taxable purchasable product-type-simple">
+                                        <div class="shop_loop_box">
+                                            <a href="/san-pham/ip-camera-bao-dong-chong-trom-qf004-hd-wifi/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                <span class="onsale">Giảm giá!</span>
+                                                <img width="300" height="300" src="images/ipcam-qf004-4-20160517042804-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" /></a><a rel="nofollow" href="/tin-tuc/?add-to-cart=90" data-quantity="1" data-product_id="90" data-product_sku="QF004 HD WIFI" class="button product_type_simple add_to_cart_button ajax_add_to_cart" id="tech_addtocart_90">Thêm vào giỏ</a> </div>
+                                        <a href="/san-pham/ip-camera-bao-dong-chong-trom-qf004-hd-wifi/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                            <h2 class="woocommerce-loop-product__title">IP CAMERA BÁO ĐỘNG CHỐNG TRỘM QF004 HD WIFI</h2>
+                                        </a>
+                                        <span class="price"><del><span class="woocommerce-Price-amount amount">1.590.000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">1.300.000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+                                        <div class="devvn_is_featured"><img width="80" height="44" src="images/70_58013_1a.png" class="attachment-full size-full" alt="" /></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End thay đổi -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer_wrap">
+                <div class="footer1 col-md-3 col-sm-3 col-xs-12">
+                    <div id="text-2" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Thông tin liên hệ</h3>
+                        <div class="textwidget">
+                            <p><b><span style="color: red">TECH360 HÀ NỘI</span></b><br />
+                                Địa chỉ: Số 58 Thái Hà , Đống Đa<br />
+                                Điện thoại: (+84) 243.944.7979<br />
+                                Hotline: 0938.94.1111<br />
+                                <b><span style="color: red">TECH360 HCM</span></b><br />
+                                Địa chỉ: 9/7 Lý Văn Phức, P. Tân Định, Q1<br />
+                                Hotline: 0938.94.1115<br />
+                                <b><span style="color: red">EMAIL TECH360<b></b></span><b><br />
+                                        tech360.com.vn@gmail.com</b></b></p>
+                        </div>
+                    </div>
+                    <div id="text-5" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Theo dõi SHOP</h3>
+                        <div class="textwidget">
+                            <ul class="list-socials">
+                                <li><a href="#" target="_blank" title=""><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" title=""><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer2 col-md-3 col-sm-3 col-xs-12">
+                    <div id="nav_menu-2" class="widget-footer widget_nav_menu">
+                        <h3 class="title-sidebar-footer">Trợ giúp</h3>
+                        <div class="menu-menu-tro-giup-container">
+                            <ul id="menu-menu-tro-giup" class="menu">
+                                <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="/gioi-thieu/">Giới thiệu</a></li>
+                                <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="/tin-tuc/">Tin tức</a></li>
+                                <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="/ho-tro-khach-hang/">Hỗ trợ khách hàng</a></li>
+                                <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="/hinh-thuc-thanh-toan/">Hình thức thanh toán</a></li>
+                                <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="/hinh-thuc-van-chuyen/">Hình thức vận chuyển</a></li>
+                                <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="/lien-he/">Liên hệ</a></li>
+                                <li id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-515"><a href="/tai-khoan/">Tài khoản</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer3 col-md-3 col-sm-3 col-xs-12">
+                    <div id="text-4" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Facebook</h3>
+                        <div class="textwidget">
+                            <div class="fb-page" data-href="https://www.facebook.com/covekila" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/covekila">
+                                    <p><a href="https://www.facebook.com/covekila">Levantoi.vn</a></p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer4 col-md-3 col-sm-3 col-xs-12">
+                    <div id="text-6" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Bản đồ</h3>
+                        <div class="textwidget">
+                            <div class="full_mobile"><a href="#" target="_blank"><img src="images/maps.png" alt="" /></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_tags">
+                <div id="woocommerce_product_tag_cloud-2" class="widget-footer woocommerce widget_product_tag_cloud">
+                    <h3 class="title-sidebar-footer">Từ khóa thông dụng</h3>
+                    <div class="tagcloud">
+                        <a href="#" class="tag-cloud-link tag-link-16 tag-link-position-1" style="font-size: 22pt;" aria-label="android TV Box (2 sản phẩm)">android TV Box</a>
+                        <a href="/tu-khoa/camera-the-thao/" class="tag-cloud-link tag-link-18 tag-link-position-2" style="font-size: 22pt;" aria-label="Camera thể thao (2 sản phẩm)">Camera thể thao</a>
+                        <a href="/tu-khoa/hdmi/" class="tag-cloud-link tag-link-40 tag-link-position-3" style="font-size: 8pt;" aria-label="hdmi (1 sản phẩm)">hdmi</a>
+                        <a href="/tu-khoa/kiwibox/" class="tag-cloud-link tag-link-17 tag-link-position-4" style="font-size: 22pt;" aria-label="Kiwibox (2 sản phẩm)">Kiwibox</a>
+                        <a href="/tu-khoa/may-chieu/" class="tag-cloud-link tag-link-20 tag-link-position-5" style="font-size: 8pt;" aria-label="máy chiếu (1 sản phẩm)">máy chiếu</a>
+                        <a href="/tu-khoa/o-cam/" class="tag-cloud-link tag-link-19 tag-link-position-6" style="font-size: 8pt;" aria-label="ổ cắm (1 sản phẩm)">ổ cắm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="footer_copyright_left">Copyright © 2017 ShopOnline - All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <div class="box_overlay"></div>
+    <!-- Start Quick Buttons By https://muatheme.com -->
+    <div class='quick-call-button'></div>
+    <div class="show_phone_mobile"><a href="tel:0888090898" title="Gọi ngay"><i class="fa  fa-phone"></i> 0888.090.898</a></div>
+    <link rel='stylesheet' id='lv_css-css' href='css/quick-call-button.css?ver=1.0.3' type='text/css' media='all' />
+    <script type='text/javascript' src='js/scripts.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.bpopup.min.js'></script>
+    <script type='text/javascript' src='js/underscore.min.js'></script>
+    <script type='text/javascript' src='js/wp-util.min.js'></script>
+    <script type='text/javascript' src='js/add-to-cart-variation.min.js'></script>
+    <script type='text/javascript' src='js/devvn-quick-buy.js'></script>
+    <script type='text/javascript' src='js/devvn_main.js'></script>
+    <script type='text/javascript' src='js/add-to-cart.min.js'></script>
+    <script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='js/js.cookie.min.js'></script>
+    <script type='text/javascript' src='js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='js/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='js/wp-embed.min.js'></script>
+    <script type='text/javascript' src='js/drag-quick-call-button.js'></script>
+    <a title="Lên đầu trang" href="#" class="scrollTo_top"><i class="fa fa-arrow-up"></i></a>
+    <div class="cart_floating_right">
+        <div class="cart_floating_right_button"><strong><i class="fa fa-shopping-basket"></i> Giỏ hàng</strong></div>
+        <div class="cart_floating_right_content">
+            <div class="cart_floating_right_title">
+                <span><i class="fa fa-shopping-basket"></i> Giỏ hàng của bạn</span>
+                <span><i class="fa fa-sign-out"></i> Thu nhỏ</span>
+            </div>
+            <div class="cart_floating_right_minicart woocommerce">
+                <div class="floating_popup_cart">
+                    <ul class="cart_list product_list_widget ">
+                        <li class="empty">Chưa có sản phẩm trong giỏ hàng.</li>
+                    </ul><!-- end product list -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function($) {
+        $(document).ready(function() {
+            $('.cart_floating_right_button').click(function() {
+                $('.cart_floating_right').addClass('open_float_cart');
+            });
+            $('.cart_floating_right_title').click(function() {
+                $('.cart_floating_right').removeClass('open_float_cart');
+            });
+        });
+    })(jQuery);
+    </script>
+</body>
+
+</html>

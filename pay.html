@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Demo theme WordPress bán hàng điện tử, điện máy | Công nghệ cho cuộc sống</title>
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel='stylesheet' href='css/styles.css?ver=5.0.4' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/setup_css.css' type='text/css' />
+    <link rel='stylesheet' href='css/devvn-quick-buy.css?ver=2.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-layout.css?ver=3.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-smallscreen.css?ver=3.4.5' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' href='css/woocommerce.css?ver=3.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='css/devvn_style.css?ver=1.02' type='text/css' media='all' />
+    <link rel='stylesheet' id='respon-css' href='css/respon.css?ver=1.02' type='text/css' media='all' />
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <link rel="icon" href="images/logo.png" sizes="32x32" />
+    <link rel="icon" href="images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
+    <meta name="msapplication-TileImage" content="images/logo.png" />
+    <script>
+        jQuery( document ).ready(function() {
+        jQuery('img[data-lazy-src]').each(function() 
+        {  
+              var imgsrc = jQuery(this).attr("data-lazy-src");
+              jQuery(this).attr('src',imgsrc);
+        });    
+    var tbay_bottom_header = jQuery('header.header');
+   
+        var CurrentScroll = 0;
+        var tbay_width = jQuery(window).width();
+        var header_height = tbay_bottom_header.height();
+       
+        jQuery(window).scroll(function() {
+            if(tbay_width <= 767) {
+                //alert('ss');
+                var NextScroll = jQuery(this).scrollTop();
+                if (NextScroll > header_height + 30) {
+                    tbay_bottom_header.addClass('sticky-header');
+                  
+                } else {
+                    tbay_bottom_header.removeClass('sticky-header');
+                   
+                }
+               
+            }
+        });
+    });
+    
+    </script>
+</head>
+
+<body data-rsssl=1 class="home woocommerce page-template page-template-templates page-template-home-default page-template-templateshome-default-php page page-id-409 woocommerce-no-js devvn_desktop sidebar_to_menu logo_menu_stick">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <header class="header">
+        <div class="top_header">
+            <div class="container">
+                <div class="top_header_left"><i class="fa fa-envelope-open" aria-hidden="true"></i> info@tech360.vn</div>
+                <div class="top_header_middle"><i class="fa fa-phone-square" aria-hidden="true"></i> 0888.090.898</div>
+                <div class="top_header_right"><i class="fa fa-facebook-official" aria-hidden="true"></i> fb.com/tech360</div>
+            </div>
+        </div>
+        <div class="main_header">
+            <div class="container">
+                <h2 class="logo">
+                    <a href="/" title="Công nghệ cho cuộc sống"><img src="images/logo.png" alt="Demo theme Wordpress bán hàng điện tử, điện máy" /></a>
+                </h2>
+                <div class="search_header">
+                    <form role="search" method="get" class="woocommerce-product-search" action="/">
+                        <input type="search" id="woocommerce-product-search-field" class="search-field" placeholder="Tìm kiếm sản phẩm" value="" name="s" title="Search for:" />
+                        <button type="submit" class="btn btn-default" id="searchsubmit">Tìm kiếm</button>
+                        <input type="hidden" name="post_type" value="product" />
+                    </form>
+                </div>
+                <div class="cart_header woocommerce">
+                    <div class="popup_cart_hover">
+                        <a class="cart-contents" href="/gio-hang/" title="Hiển thị giỏ hàng">
+                            <span>Giỏ hàng của bạn</span>
+                            <small>Chưa có sản phẩm</small>
+                        </a>
+                        <div class="popup_cart">
+                            <ul class="cart_list product_list_widget ">
+                                <li class="empty">Chưa có sản phẩm trong giỏ hàng.</li>
+                            </ul><!-- end product list -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_header_wrap">
+            <div class="container">
+                <div class="danhmuc_sanpham_menu">
+                    <h3 class="title-sidebar click_open_mega">Danh mục sản phẩm<i class="fa fa-bars"></i></h3>
+                    <div class="devvn_mega_menu_wrap">
+                        <div class="devvn_mega_menu_box">
+                            <ul class="devvn_mega_menu_ul">
+                                <li class="">
+                                    <a href="#" title="Android TV Box"><i class="devvn_mega_menu_icon" style="background: url(images/android_box.png) no-repeat center center;"></i>Android TV Box</a>
+                                    <i class="click_open_sub_megamenu">+</i>
+                                    <div class="devvn_sub_mega_content" style="background: #fff url(images/androidbox.png) no-repeat right bottom;">
+                                        <div class="devvn_sub_mega_content_box devvn-megamenu-3-column">
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub menu 1</h2>
+                                                    <ul>
+                                                        <li><a href="#" title="Sub menu  dm1">Sub menu dm1</a></li>
+                                                        <li><a href="#" title="Sub menu 1">Sub menu 1</a></li>
+                                                        <li><a href="#" title="Sub menu 1">Sub menu 1</a></li>
+                                                        <li><a href="#" title="Sub menu 1">Sub menu 1</a></li>
+                                                        <li><a href="" title="sub 121331">sub 121331</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub menu 2</h2>
+                                                    <ul>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                        <li><a href="#" title="Sub menu 2">Sub menu 2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Phụ Kiện Android Box"><i class="devvn_mega_menu_icon" style="background: url(images/phu_kien_android_box.png) no-repeat center center;"></i>Phụ Kiện Android Box</a>
+                                    <i class="click_open_sub_megamenu">+</i>
+                                    <ul class="devvn_sub_menu">
+                                        <li>
+                                            <a href="#" title="Phụ kiện 1">Phụ kiện 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Phụ kiện 2">Phụ kiện 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Phụ kiện 3">Phụ kiện 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Camera Thông Minh"><i class="devvn_mega_menu_icon" style="background: url(images/camera_thong_minh.png) no-repeat center center;"></i>Camera Thông Minh</a>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Kính Thực Tế Ảo"><i class="devvn_mega_menu_icon" style="background: url(images/141230510593.png) no-repeat center center;"></i>Kính Thực Tế Ảo</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="Smart Watch"><i class="devvn_mega_menu_icon" style="background: url(images/smart_watch.png) no-repeat center center;"></i>Smart Watch</a>
+                                    <i class="click_open_sub_megamenu">+</i>
+                                    <div class="devvn_sub_mega_content" style="background: #fff url(images/camera_thong_minh_to.png) no-repeat right bottom;">
+                                        <div class="devvn_sub_mega_content_box devvn-megamenu-3-column">
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub Smart Watch</h2>
+                                                    <ul>
+                                                        <li><a href="#" title="Smart Watch 1">Smart Watch 1</a></li>
+                                                        <li><a href="#" title="Smart Watch 2">Smart Watch 2</a></li>
+                                                        <li><a href="#" title="Smart Watch">Smart Watch</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="devvn-mega-sub-column-3 devvn_sub_mega_content_column">
+                                                <div class="devvn_mega_menu_title">
+                                                    <h2>Sub Smart Watch 2</h2>
+                                                    <ul>
+                                                        <li><a href="" title="Sub Smart Watch">Sub Smart Watch</a></li>
+                                                        <li><a href="" title="Sub Smart Watch 2 2">Sub Smart Watch 2 2</a></li>
+                                                        <li><a href="" title="Sub Smart Watch 2 3">Sub Smart Watch 2 3</a></li>
+                                                        <li><a href="" title="Sub Smart Watch 2 4">Sub Smart Watch 2 4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Android TV Box"><i class="devvn_mega_menu_icon" style="background: url(images/android_box.png) no-repeat center center;"></i>Android TV Box</a>
+                                </li>
+                                <li class="no-have-mega">
+                                    <a href="#" title="Android TV Box"><i class="devvn_mega_menu_icon" style="background: url(images/141230510593.png) no-repeat center center;"></i>Android TV Box</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button_open_menu"><i class="fa fa-bars"></i> Menu</a>
+                <div class="menu_header">
+                    <ul id="menu-main-menu" class="menu">
+                        <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-31"><a href="/trang-chu/">Trang chủ</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-452"><a href="/trang-chu/">Trang chủ 1 – Full width</a></li>
+                                <li id="menu-item-422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-422"><a href="/trang-chu-2/">Trang chủ 2 – Full width + Product Menu</a></li>
+                                <li id="menu-item-421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-409 current_page_item menu-item-421"><a href="/">Trang chủ 3 – Mặc định – Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-29"><a href="/tin-tuc/">Tin tức</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181"><a href="/category/camera-thong-minh/">Camera Thông Minh</a></li>
+                                <li id="menu-item-180" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-180"><a href="/category/android-box/">Android Box</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-183" class="menu-item menu-item-type-post_type_archive menu-item-object-videos menu-item-183"><a href="/videos/">Videos</a></li>
+                        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="/ho-tro-khach-hang/">Hỗ trợ khách hàng</a></li>
+                        <li id="menu-item-232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232"><a href="/he-thong-dai-ly/">Hệ thống đại lý</a></li>
+                        <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="/lien-he/">Liên hệ</a></li>
+                        <li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="/tai-khoan/">Tài khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="end_navpage"></div>
+    </header>
+    <!-- Thay đổi ở đây -->
+    <div class="main_body">
+        <div class="container">
+            <div class="row row-padding-15">
+                <div class="main_container col-xs-12">
+                    <div class="breadcrumb"><span><span><a href="https://tech360.vn/">Trang chủ</a> / <span class="breadcrumb_last" aria-current="page">Thanh toán</span></span></span></div>
+                    <div class="page_content">
+                        <h1 class="title-page">Thanh toán</h1>
+                        <div class="tinymce">
+                            <div class="woocommerce">
+                                <div class="woocommerce-notices-wrapper"></div>
+                                <div class="woocommerce-info">
+                                    Bạn đã có tài khoản? <a href="#" class="showlogin">Ấn vào đây để đăng nhập</a>. Nếu bạn chưa có tài khoản, bạn hãy điền thông tin bên dưới và tạo tài khoản mới. </div>
+                                <form class="woocommerce-form woocommerce-form-login login" method="post" style="display:none;">
+                                    <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p>
+                                    <p class="form-row form-row-first">
+                                        <label for="username">Tên đăng nhập hoặc email&nbsp;<span class="required">*</span></label>
+                                        <input type="text" class="input-text" name="username" id="username" autocomplete="username">
+                                    </p>
+                                    <p class="form-row form-row-last">
+                                        <label for="password">Mật khẩu&nbsp;<span class="required">*</span></label>
+                                        <input class="input-text" type="password" name="password" id="password" autocomplete="current-password">
+                                    </p>
+                                    <div class="clear"></div>
+                                    <p class="form-row">
+                                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                                            <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"> <span>Ghi nhớ mật khẩu</span>
+                                        </label>
+                                        <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="f1158313bb"><input type="hidden" name="_wp_http_referer" value="/thanh-toan"> <input type="hidden" name="redirect" value="https://tech360.vn/thanh-toan">
+                                        <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Đăng nhập">Đăng nhập</button>
+                                    </p>
+                                    <p class="lost_password">
+                                        <a href="https://tech360.vn/tai-khoan/lost-password/">Quên mật khẩu?</a>
+                                    </p>
+                                    <div class="clear"></div>
+                                </form>
+                                <div class="woocommerce-info">
+                                    Bạn có mã ưu đãi? <a href="#" class="showcoupon">Ấn vào đây để nhập mã</a> </div>
+                                <form class="checkout_coupon" method="post" style="display:none">
+                                    <p class="form-row form-row-first">
+                                        <input type="text" name="coupon_code" class="input-text" placeholder="Mã ưu đãi" id="coupon_code" value="">
+                                    </p>
+                                    <p class="form-row form-row-last">
+                                        <input type="submit" class="button" name="apply_coupon" id="button_appdung_makhuyenmai" value="Apply Coupon">
+                                    </p>
+                                    <div class="clear"></div>
+                                </form>
+                                <div class="woocommerce-notices-wrapper"></div>
+                                <form name="checkout" method="post" class="checkout woocommerce-checkout" action="https://tech360.vn/thanh-toan" enctype="multipart/form-data" novalidate="novalidate">
+                                    <div id="order_review" class="woocommerce-checkout-review-order">
+                                        <h3 id="order_review_heading">Đơn hàng của bạn</h3>
+                                        <table class="shop_table woocommerce-checkout-review-order-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="product-name">Sản phẩm</th>
+                                                    <th class="product-total">Tổng</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="cart_item">
+                                                    <td class="product-name">
+                                                        Action camera SJACM SJ8 Plus 4K Wifi&nbsp; <strong class="product-quantity">× 1</strong> </td>
+                                                    <td class="product-total">
+                                                        <span class="woocommerce-Price-amount amount">4.149.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span> </td>
+                                                </tr>
+                                                <tr class="cart_item">
+                                                    <td class="product-name">
+                                                        Android Tv Box Sunvell T95 S1&nbsp; <strong class="product-quantity">× 1</strong> </td>
+                                                    <td class="product-total">
+                                                        <span class="woocommerce-Price-amount amount">1.250.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span> </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr class="cart-subtotal">
+                                                    <th>Tổng phụ</th>
+                                                    <td><span class="woocommerce-Price-amount amount">5.399.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <th>Tổng</th>
+                                                    <td><strong><span class="woocommerce-Price-amount amount">5.399.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></strong> </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div class="col2-set" id="customer_details">
+                                        <div class="col-1">
+                                            <div class="woocommerce-billing-fields">
+                                                <h3>Thông tin thanh toán</h3>
+                                                <div class="woocommerce-billing-fields__field-wrapper">
+                                                    <p class="form-row form-row-wide validate-required" id="billing_last_name_field" data-priority=""><label for="billing_last_name" class="">Họ và tên&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_last_name" id="billing_last_name" placeholder="Nhập đầy đủ họ và tên của bạn" value=""></span></p>
+                                                    <p class="form-row form-row-wide address-field validate-required" id="billing_address_1_field" data-priority="50"><label for="billing_address_1" class="">Địa chỉ&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="Ví dụ: Số 18 Ngõ 86 Phú Kiều, Bắc Từ Liêm, Hà Nội" value="" autocomplete="address-line1"></span></p>
+                                                    <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Số điện thoại&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel"></span></p>
+                                                    <p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Địa chỉ email&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email username"></span></p>
+                                                </div>
+                                            </div>
+                                            <div class="woocommerce-account-fields">
+                                                <p class="form-row form-row-wide create-account woocommerce-validated">
+                                                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                                                        <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1"> <span>Tạo tài khoản mới?</span>
+                                                    </label>
+                                                </p>
+                                                <div class="create-account" style="display: none;">
+                                                    <p class="form-row validate-required" id="account_password_field" data-priority=""><label for="account_password" class="">Tạo mật khẩu của tài khoản&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="password" class="input-text " name="account_password" id="account_password" placeholder="Mật khẩu" value=""></span></p>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="woocommerce-shipping-fields">
+                                            </div>
+                                            <div class="woocommerce-additional-fields">
+                                                <h3>Thông tin bổ sung</h3>
+                                                <div class="woocommerce-additional-fields__field-wrapper">
+                                                    <p class="form-row notes" id="order_comments_field" data-priority=""><label for="order_comments" class="">Ghi chú đơn hàng&nbsp;<span class="optional">(tuỳ chọn)</span></label><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." rows="2" cols="5"></textarea></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div id="payment" class="woocommerce-checkout-payment">
+                                        <ul class="wc_payment_methods payment_methods methods">
+                                            <li class="wc_payment_method payment_method_cod">
+                                                <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked="checked" data-order_button_text="">
+                                                <label for="payment_method_cod">
+                                                    Trả tiền mặt khi nhận hàng </label>
+                                            </li>
+                                            <li class="wc_payment_method payment_method_vnpay">
+                                                <input id="payment_method_vnpay" type="radio" class="input-radio" name="payment_method" value="vnpay" data-order_button_text="">
+                                                <label for="payment_method_vnpay">
+                                                    Thanh toán qua VNPAY </label>
+                                                <div class="payment_box payment_method_vnpay" style="display:none;">
+                                                    <p>Thanh toán trực tuyến qua VNPAY</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="form-row place-order">
+                                            <noscript>
+                                                Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so. <br /><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Cập nhật tổng">Cập nhật tổng</button>
+                                            </noscript>
+                                            <div class="woocommerce-terms-and-conditions-wrapper">
+                                                <div class="woocommerce-privacy-policy-text"></div>
+                                            </div>
+                                            <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Đặt hàng" data-value="Đặt hàng">Đặt hàng</button>
+                                            <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="5c8a01067a"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End thay đổi -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer_wrap">
+                <div class="footer1 col-md-3 col-sm-3 col-xs-12">
+                    <div id="text-2" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Thông tin liên hệ</h3>
+                        <div class="textwidget">
+                            <p><b><span style="color: red">TECH360 HÀ NỘI</span></b><br />
+                                Địa chỉ: Số 58 Thái Hà , Đống Đa<br />
+                                Điện thoại: (+84) 243.944.7979<br />
+                                Hotline: 0938.94.1111<br />
+                                <b><span style="color: red">TECH360 HCM</span></b><br />
+                                Địa chỉ: 9/7 Lý Văn Phức, P. Tân Định, Q1<br />
+                                Hotline: 0938.94.1115<br />
+                                <b><span style="color: red">EMAIL TECH360<b></b></span><b><br />
+                                        tech360.com.vn@gmail.com</b></b></p>
+                        </div>
+                    </div>
+                    <div id="text-5" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Theo dõi SHOP</h3>
+                        <div class="textwidget">
+                            <ul class="list-socials">
+                                <li><a href="#" target="_blank" title=""><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" title=""><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer2 col-md-3 col-sm-3 col-xs-12">
+                    <div id="nav_menu-2" class="widget-footer widget_nav_menu">
+                        <h3 class="title-sidebar-footer">Trợ giúp</h3>
+                        <div class="menu-menu-tro-giup-container">
+                            <ul id="menu-menu-tro-giup" class="menu">
+                                <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="/gioi-thieu/">Giới thiệu</a></li>
+                                <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="/tin-tuc/">Tin tức</a></li>
+                                <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="/ho-tro-khach-hang/">Hỗ trợ khách hàng</a></li>
+                                <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="/hinh-thuc-thanh-toan/">Hình thức thanh toán</a></li>
+                                <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="/hinh-thuc-van-chuyen/">Hình thức vận chuyển</a></li>
+                                <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="/lien-he/">Liên hệ</a></li>
+                                <li id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-515"><a href="/tai-khoan/">Tài khoản</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer3 col-md-3 col-sm-3 col-xs-12">
+                    <div id="text-4" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Facebook</h3>
+                        <div class="textwidget">
+                            <div class="fb-page" data-href="https://www.facebook.com/covekila" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/covekila">
+                                    <p><a href="https://www.facebook.com/covekila">Levantoi.vn</a></p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer4 col-md-3 col-sm-3 col-xs-12">
+                    <div id="text-6" class="widget-footer widget_text">
+                        <h3 class="title-sidebar-footer">Bản đồ</h3>
+                        <div class="textwidget">
+                            <div class="full_mobile"><a href="#" target="_blank"><img src="images/maps.png" alt="" /></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_tags">
+                <div id="woocommerce_product_tag_cloud-2" class="widget-footer woocommerce widget_product_tag_cloud">
+                    <h3 class="title-sidebar-footer">Từ khóa thông dụng</h3>
+                    <div class="tagcloud">
+                        <a href="#" class="tag-cloud-link tag-link-16 tag-link-position-1" style="font-size: 22pt;" aria-label="android TV Box (2 sản phẩm)">android TV Box</a>
+                        <a href="/tu-khoa/camera-the-thao/" class="tag-cloud-link tag-link-18 tag-link-position-2" style="font-size: 22pt;" aria-label="Camera thể thao (2 sản phẩm)">Camera thể thao</a>
+                        <a href="/tu-khoa/hdmi/" class="tag-cloud-link tag-link-40 tag-link-position-3" style="font-size: 8pt;" aria-label="hdmi (1 sản phẩm)">hdmi</a>
+                        <a href="/tu-khoa/kiwibox/" class="tag-cloud-link tag-link-17 tag-link-position-4" style="font-size: 22pt;" aria-label="Kiwibox (2 sản phẩm)">Kiwibox</a>
+                        <a href="/tu-khoa/may-chieu/" class="tag-cloud-link tag-link-20 tag-link-position-5" style="font-size: 8pt;" aria-label="máy chiếu (1 sản phẩm)">máy chiếu</a>
+                        <a href="/tu-khoa/o-cam/" class="tag-cloud-link tag-link-19 tag-link-position-6" style="font-size: 8pt;" aria-label="ổ cắm (1 sản phẩm)">ổ cắm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="footer_copyright_left">Copyright © 2017 ShopOnline - All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <div class="box_overlay"></div>
+    <!-- Start Quick Buttons By https://muatheme.com -->
+    <div class='quick-call-button'></div>
+    <div class="show_phone_mobile"><a href="tel:0888090898" title="Gọi ngay"><i class="fa  fa-phone"></i> 0888.090.898</a></div>
+    <link rel='stylesheet' id='lv_css-css' href='css/quick-call-button.css?ver=1.0.3' type='text/css' media='all' />
+    <script type='text/javascript' src='js/scripts.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.bpopup.min.js'></script>
+    <script type='text/javascript' src='js/underscore.min.js'></script>
+    <script type='text/javascript' src='js/wp-util.min.js'></script>
+    <script type='text/javascript' src='js/add-to-cart-variation.min.js'></script>
+    <script type='text/javascript' src='js/devvn-quick-buy.js'></script>
+    <script type='text/javascript' src='js/devvn_main.js'></script>
+    <script type='text/javascript' src='js/add-to-cart.min.js'></script>
+    <script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='js/js.cookie.min.js'></script>
+    <script type='text/javascript' src='js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='js/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='js/wp-embed.min.js'></script>
+    <script type='text/javascript' src='js/drag-quick-call-button.js'></script>
+    <a title="Lên đầu trang" href="#" class="scrollTo_top"><i class="fa fa-arrow-up"></i></a>
+    <div class="cart_floating_right">
+        <div class="cart_floating_right_button"><strong><i class="fa fa-shopping-basket"></i> Giỏ hàng</strong></div>
+        <div class="cart_floating_right_content">
+            <div class="cart_floating_right_title">
+                <span><i class="fa fa-shopping-basket"></i> Giỏ hàng của bạn</span>
+                <span><i class="fa fa-sign-out"></i> Thu nhỏ</span>
+            </div>
+            <div class="cart_floating_right_minicart woocommerce">
+                <div class="floating_popup_cart">
+                    <ul class="cart_list product_list_widget ">
+                        <li class="empty">Chưa có sản phẩm trong giỏ hàng.</li>
+                    </ul><!-- end product list -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function($) {
+        $(document).ready(function() {
+            $('.cart_floating_right_button').click(function() {
+                $('.cart_floating_right').addClass('open_float_cart');
+            });
+            $('.cart_floating_right_title').click(function() {
+                $('.cart_floating_right').removeClass('open_float_cart');
+            });
+        });
+    })(jQuery);
+    </script>
+</body>
+
+</html>
